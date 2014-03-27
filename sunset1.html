@@ -17,8 +17,13 @@
       function changeBandHeight() {
         var bands = document.getElementsByClassName('sunsetBand');
         for(i=0; i<bands.length; i++) {
-          bands[i].offsetHeight = '200px';
+          bands[i].style.height = '200px';
         }
+      }
+      
+      function updateHeight() {
+        var canvas = document.getElementById('sunset_canvas');
+        canvas.style.height = window.innerHeight;
       }
     </script>
     <style>
@@ -32,7 +37,7 @@
       }
       .sunsetBand {
         position:relative;
-        height:100px;
+        height:17%;
       }
       .behindSun {
         z-index:-1;
