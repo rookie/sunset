@@ -28,12 +28,14 @@
         canvas.style.height = window.innerHeight + 'px';
         
         var sun = document.getElementById('bandSun');
-        var sunSize = (window.innerHeight / 6 * 3) + 'px';
-        sun.style.height = sunSize;
-        sun.style.width = sunSize;
+        var sunSize = (window.innerHeight / 6 * 3);
+        sun.style.height = sunSize + 'px';
+        sun.style.width = sunSize + 'px';
         
-        var sunTop = (window.innerHeight / 6 * 2.5) + 'px';
-        sun.style.top = sunTop;
+        var sunTop = (window.innerHeight / 6 * 2.5);
+        sun.style.top = sunTop + 'px';
+        
+        sun.style.marginLeft = (sunSize / 2) + 'px';
       }
     </script>
     <style>
@@ -71,11 +73,6 @@
         position:absolute;
         border-radius:100%;
         z-index:0;
-        height:300px;
-        width:300px;
-        top:250px;	
-  	    left: 50%;;
-        margin-left:-150px;
         background-color:rgb(243,156,0);
       }
       #band4 {
