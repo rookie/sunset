@@ -13,6 +13,13 @@
       function initialize() {
         //LatLng(34.04924594193164, -118.24104309082031);
       }
+      
+      function changeBandHeight() {
+        var bands = document.getElementsByClassName('sunsetBand');
+        for(i=0; i<bands.length; i++) {
+          bands[i].offsetHeight = '200px';
+        }
+      }
     </script>
     <style>
       * {
