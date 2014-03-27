@@ -26,6 +26,14 @@
       function updateHeight() {
         var canvas = document.getElementById('sunset_canvas');
         canvas.style.height = window.innerHeight + 'px';
+        
+        var sun = document.getElementById('bandSun');
+        var sunSize = (window.innerHeight / 6 * 3) + 'px';
+        sun.style.height = sunSize;
+        sun.style.width = sunSize;
+        
+        var sunTop = (window.innerHeight / 6 * 2.5) + 'px';
+        sun.style.top = sunTop;
       }
     </script>
     <style>
