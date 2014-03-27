@@ -12,6 +12,8 @@
     <script>
       function initialize() {
         //LatLng(34.04924594193164, -118.24104309082031);
+        updateHeight();
+        window.onresize = updateHeight;
       }
       
       function changeBandHeight() {
@@ -23,7 +25,7 @@
       
       function updateHeight() {
         var canvas = document.getElementById('sunset_canvas');
-        canvas.style.height = window.innerHeight;
+        canvas.style.height = window.innerHeight + 'px';
       }
     </script>
     <style>
