@@ -22,6 +22,12 @@
       .sunsetBand {
         height:100px;
       }
+      .behindSun {
+        z-index:-1;
+      }
+      .aboveSun {
+        z-index: 1;
+      }
       #band0 {
         background-color:rgb(238,132,0);
       }
@@ -36,6 +42,11 @@
       }
       #bandSun {
         position:absolute;
+        z-index:0;
+        height:300px;
+        width:300px;
+        top:350px;	
+        left:300px;
         background-color:rgb(243,156,0);
       }
       #band4 {
@@ -48,12 +59,13 @@
   </head>
   <body onload="initialize()">
     <div id="sunset_canvas">
-      <div id="band0" class="sunsetBand"></div>
-      <div id="band1" class="sunsetBand"></div>
-      <div id="band2" class="sunsetBand"></div>
-      <div id="band3" class="sunsetBand"></div>
-      <div id="band4" class="sunsetBand"></div>
-      <div id="band5" class="sunsetBand"></div>    
+      <div id="band0" class="sunsetBand behindSun"></div>
+      <div id="band1" class="sunsetBand behindSun"></div>
+      <div id="band2" class="sunsetBand behindSun"></div>
+      <div id="band3" class="sunsetBand behindSun"></div>
+      <div id="bandSun"></div>
+      <div id="band4" class="sunsetBand aboveSun"></div>
+      <div id="band5" class="sunsetBand aboveSun"></div>    
     </div>
   </body>
 </html>
